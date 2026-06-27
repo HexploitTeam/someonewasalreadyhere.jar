@@ -1,6 +1,7 @@
 package com.someonewasalreadyhere;
 
 import com.someonewasalreadyhere.core.network.ModNetwork;
+import com.someonewasalreadyhere.core.registry.ModBlocks;
 import com.someonewasalreadyhere.core.registry.ModCreativeTab;
 import com.someonewasalreadyhere.core.registry.ModEntities;
 import com.someonewasalreadyhere.core.registry.ModItems;
@@ -25,8 +26,12 @@ public class SomeoneWasAlreadyHere {
 
         // Core registries
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         ModEntities.ENTITIES.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
+
+        // Block items
+        ModBlocks.registerBlockItems();
 
         // Creative tab
         ModCreativeTab.CREATIVE_TABS.register(modEventBus);
