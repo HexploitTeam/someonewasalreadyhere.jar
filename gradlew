@@ -111,7 +111,7 @@ if ! "$cygwin" && ! "$msys" && ! "$darwin" && ! "$nonstop" ; then
         # https://github.com/oh-my-zsh/oh-my-zsh/issues/11050
         # Ensure we can run getconf safely in all shells
         if command -v getconf 1>/dev/null 2>&1 ; then
-             MAX_FD=$( getconf OPEN_MAX) &&
+             MAX_FD=$( getconf OPEN_MAX )
         else
              MAX_FD=65536
         fi
