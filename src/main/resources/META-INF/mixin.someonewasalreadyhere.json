@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.someonewasalreadyhere.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "client": [
+    "OptionsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
