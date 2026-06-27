@@ -1,0 +1,14 @@
+Place your .ogg sound files in the following subdirectory structure:
+
+  assets/someonewasalreadyhere/sounds/ambient/
+    silence_ambient.ogg
+    custodian_work.ogg
+    echo_whisper.ogg
+    cave_breath.ogg
+    static_hum.ogg
+
+  assets/someonewasalreadyhere/sounds/player/
+    footstep_double.ogg
+
+All referenced in sounds.json. Use free CC0 sound resources such as:
+  https://freesound.org  (search "ambient drone", "cave breath", "static noise")
