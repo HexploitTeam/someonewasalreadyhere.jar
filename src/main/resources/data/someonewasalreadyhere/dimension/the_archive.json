@@ -1,0 +1,17 @@
+{
+  "type": "someonewasalreadyhere:the_archive",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "layers": [
+        { "block": "minecraft:bedrock", "height": 1 },
+        { "block": "minecraft:stone_bricks", "height": 50 },
+        { "block": "minecraft:air", "height": 128 }
+      ],
+      "biome": "minecraft:the_void",
+      "features": false,
+      "lakes": false,
+      "structure_overrides": []
+    }
+  }
+}
