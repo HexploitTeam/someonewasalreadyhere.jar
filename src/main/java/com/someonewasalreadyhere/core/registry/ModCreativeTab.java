@@ -41,6 +41,13 @@ public class ModCreativeTab {
                 output.accept(ModItems.ECHO_FRAGMENT_TOTEM.get());
                 output.accept(ModItems.QUIET_BLOOM.get());
                 output.accept(ModItems.BROKEN_FREQUENCY_RADIO.get());
+                // Blocks
+                output.accept(ModBlocks.CORRUPTED_STONE.get());
+                output.accept(ModBlocks.ARCHIVE_BRICKS.get());
+                output.accept(ModBlocks.QUIET_GRASS_BLOCK.get());
+                output.accept(ModBlocks.DISTORTED_ORE.get());
+                output.accept(ModBlocks.REINFORCED_ARCHIVE.get());
+                output.accept(ModBlocks.STATIC_STONE.get());
             })
             .build()
     );
