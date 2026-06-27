@@ -1,4 +1,6 @@
 {
+  "itemGroup.someonewasalreadyhere": "Someone Was Already Here",
+
   "item.someonewasalreadyhere.distorted_compass": "Distorted Compass",
   "item.someonewasalreadyhere.sound_lantern": "Sound Lantern",
   "item.someonewasalreadyhere.stabilizer_charm": "Stabilizer Charm",
@@ -49,5 +51,16 @@
   "subtitles.someonewasalreadyhere.echo_whisper": "Echoes fade",
   "subtitles.someonewasalreadyhere.cave_breath": "Cave breathes",
   "subtitles.someonewasalreadyhere.static_hum": "Static drones",
-  "subtitles.someonewasalreadyhere.footstep_double": "Extra footstep"
+  "subtitles.someonewasalreadyhere.footstep_double": "Extra footstep",
+
+  "someonewasalreadyhere.awareness.message.low": "Something is watching.",
+  "someonewasalreadyhere.awareness.message.medium": "It knows you are here.",
+  "someonewasalreadyhere.awareness.message.high": "You should not have come.",
+  "someonewasalreadyhere.awareness.message.max": "Someone was already here.",
+  "someonewasalreadyhere.awareness.hud": "Awareness: %s",
+  "someonewasalreadyhere.ui.stabilizer": "Stabilizing...",
+  "someonewasalreadyhere.ui.scanner.anomaly": "ANOMALY DETECTED",
+  "someonewasalreadyhere.ui.scanner.clear": "Scanning...",
+  "someonewasalreadyhere.ui.recorder.recording": "● REC",
+  "someonewasalreadyhere.ui.recorder.saved": "Recording saved."
 }
