@@ -1,0 +1,63 @@
+{
+  "silence_ambient": {
+    "category": "ambient",
+    "subtitle": "subtitles.someonewasalreadyhere.silence_ambient",
+    "sounds": [
+      {
+        "name": "someonewasalreadyhere:ambient/silence_ambient",
+        "type": "file",
+        "stream": true
+      }
+    ]
+  },
+  "custodian_work": {
+    "category": "ambient",
+    "subtitle": "subtitles.someonewasalreadyhere.custodian_work",
+    "sounds": [
+      {
+        "name": "someonewasalreadyhere:ambient/custodian_work",
+        "type": "file"
+      }
+    ]
+  },
+  "echo_whisper": {
+    "category": "ambient",
+    "subtitle": "subtitles.someonewasalreadyhere.echo_whisper",
+    "sounds": [
+      {
+        "name": "someonewasalreadyhere:ambient/echo_whisper",
+        "type": "file"
+      }
+    ]
+  },
+  "cave_breath": {
+    "category": "ambient",
+    "subtitle": "subtitles.someonewasalreadyhere.cave_breath",
+    "sounds": [
+      {
+        "name": "someonewasalreadyhere:ambient/cave_breath",
+        "type": "file"
+      }
+    ]
+  },
+  "static_hum": {
+    "category": "ambient",
+    "subtitle": "subtitles.someonewasalreadyhere.static_hum",
+    "sounds": [
+      {
+        "name": "someonewasalreadyhere:ambient/static_hum",
+        "type": "file"
+      }
+    ]
+  },
+  "footstep_double": {
+    "category": "players",
+    "subtitle": "subtitles.someonewasalreadyhere.footstep_double",
+    "sounds": [
+      {
+        "name": "someonewasalreadyhere:player/footstep_double",
+        "type": "file"
+      }
+    ]
+  }
+}
