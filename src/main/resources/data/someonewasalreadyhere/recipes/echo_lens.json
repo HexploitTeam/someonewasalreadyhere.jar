@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#G#",
+    "###"
+  ],
+  "key": {
+    "#": { "item": "someonewasalreadyhere:memory_shard" },
+    "G": { "item": "minecraft:glass" }
+  },
+  "result": {
+    "item": "someonewasalreadyhere:echo_lens"
+  }
+}

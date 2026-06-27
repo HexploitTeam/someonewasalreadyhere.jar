@@ -1,0 +1,34 @@
+{
+  "parent": "someonewasalreadyhere:first_encounter",
+  "display": {
+    "icon": { "item": "someonewasalreadyhere:observation_mask" },
+    "title": { "translate": "advancements.someonewasalreadyhere.boss_slayer.title" },
+    "description": { "translate": "advancements.someonewasalreadyhere.boss_slayer.description" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_observer_prime": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [{ "condition": "minecraft:entity_properties", "predicate": { "type": "someonewasalreadyhere:observer_prime" } }]
+      }
+    },
+    "kill_archivist": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [{ "condition": "minecraft:entity_properties", "predicate": { "type": "someonewasalreadyhere:archivist" } }]
+      }
+    },
+    "kill_curator": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [{ "condition": "minecraft:entity_properties", "predicate": { "type": "someonewasalreadyhere:curator" } }]
+      }
+    }
+  },
+  "requirements": [["kill_observer_prime"],["kill_archivist"],["kill_curator"]],
+  "rewards": { "experience": 500 }
+}

@@ -1,0 +1,17 @@
+{
+  "display": {
+    "icon": { "item": "someonewasalreadyhere:distorted_compass" },
+    "title": { "translate": "advancements.someonewasalreadyhere.root.title" },
+    "description": { "translate": "advancements.someonewasalreadyhere.root.description" },
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "join_world": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "requirements": [["join_world"]]
+}

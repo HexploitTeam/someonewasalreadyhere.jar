@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " E ",
+    " M "
+  ],
+  "key": {
+    "#": { "item": "someonewasalreadyhere:memory_shard" },
+    "E": { "item": "minecraft:emerald" },
+    "M": { "item": "minecraft:emerald_block" }
+  },
+  "result": {
+    "item": "someonewasalreadyhere:echo_fragment_totem"
+  }
+}

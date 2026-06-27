@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": { "item": "minecraft:iron_ingot" },
+    "S": { "item": "someonewasalreadyhere:sound_lantern" }
+  },
+  "result": {
+    "item": "someonewasalreadyhere:memory_lantern"
+  }
+}

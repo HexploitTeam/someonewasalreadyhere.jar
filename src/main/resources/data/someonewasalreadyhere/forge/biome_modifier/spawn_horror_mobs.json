@@ -1,0 +1,26 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#minecraft:is_overworld",
+  "spawners": [
+    { "type": "someonewasalreadyhere:observer", "weight": 8, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:echo_hunter", "weight": 6, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:caretaker", "weight": 4, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:archive_hound", "weight": 5, "minCount": 1, "maxCount": 3 },
+    { "type": "someonewasalreadyhere:phantom_player", "weight": 3, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:archivist", "weight": 1, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:hollow_mimic", "weight": 4, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:window_watcher", "weight": 3, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:surveyor", "weight": 4, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:static_shepherd", "weight": 3, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:sleeper", "weight": 5, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:tunnel_listener", "weight": 4, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:maintenance_drone", "weight": 3, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:incomplete", "weight": 4, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:forgotten_miner", "weight": 3, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:mirror_walker", "weight": 2, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:quiet_host", "weight": 3, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:residual_echo", "weight": 4, "minCount": 1, "maxCount": 2 },
+    { "type": "someonewasalreadyhere:cartographer", "weight": 3, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:curator", "weight": 1, "minCount": 1, "maxCount": 1 }
+  ]
+}

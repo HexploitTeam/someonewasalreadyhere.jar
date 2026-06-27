@@ -1,0 +1,20 @@
+{
+  "parent": "someonewasalreadyhere:root",
+  "display": {
+    "icon": { "item": "someonewasalreadyhere:stabilizer_charm" },
+    "title": { "translate": "advancements.someonewasalreadyhere.craft_stabilizer.title" },
+    "description": { "translate": "advancements.someonewasalreadyhere.craft_stabilizer.description" },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["someonewasalreadyhere:stabilizer_charm"] }]
+      }
+    }
+  },
+  "requirements": [["craft"]]
+}

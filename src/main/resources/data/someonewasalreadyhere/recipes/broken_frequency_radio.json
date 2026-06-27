@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","pattern":[" # ","#R#"," # "],"key":{"#":{"item":"minecraft:copper_ingot"},"R":{"item":"minecraft:redstone"}},"result":{"item":"someonewasalreadyhere:broken_frequency_radio"}}

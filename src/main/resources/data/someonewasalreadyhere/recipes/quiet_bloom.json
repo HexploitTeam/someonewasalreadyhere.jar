@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","pattern":[" # ","#S#"," # "],"key":{"#":{"item":"minecraft:wheat_seeds"},"S":{"item":"someonewasalreadyhere:memory_shard"}},"result":{"item":"someonewasalreadyhere:quiet_bloom"}}

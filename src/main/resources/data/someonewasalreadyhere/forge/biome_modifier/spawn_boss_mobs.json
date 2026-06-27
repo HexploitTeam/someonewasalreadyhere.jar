@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": ["minecraft:deep_dark"],
+  "spawners": [
+    { "type": "someonewasalreadyhere:observer_prime", "weight": 2, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:archivist", "weight": 2, "minCount": 1, "maxCount": 1 },
+    { "type": "someonewasalreadyhere:curator", "weight": 1, "minCount": 1, "maxCount": 1 }
+  ]
+}

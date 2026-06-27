@@ -62,5 +62,25 @@
   "someonewasalreadyhere.ui.scanner.anomaly": "ANOMALY DETECTED",
   "someonewasalreadyhere.ui.scanner.clear": "Scanning...",
   "someonewasalreadyhere.ui.recorder.recording": "● REC",
-  "someonewasalreadyhere.ui.recorder.saved": "Recording saved."
+  "someonewasalreadyhere.ui.recorder.saved": "Recording saved.",
+
+  "block.someonewasalreadyhere.corrupted_stone": "Corrupted Stone",
+  "block.someonewasalreadyhere.archive_bricks": "Archive Bricks",
+  "block.someonewasalreadyhere.quiet_grass_block": "Quiet Grass Block",
+  "block.someonewasalreadyhere.distorted_ore": "Distorted Ore",
+  "block.someonewasalreadyhere.reinforced_archive": "Reinforced Archive",
+  "block.someonewasalreadyhere.static_stone": "Static Stone",
+
+  "advancements.someonewasalreadyhere.root.title": "Someone Was Already Here",
+  "advancements.someonewasalreadyhere.root.description": "You are not alone. Something was here before you.",
+  "advancements.someonewasalreadyhere.first_encounter.title": "First Encounter",
+  "advancements.someonewasalreadyhere.first_encounter.description": "Kill an Observer. It was watching you for so long.",
+  "advancements.someonewasalreadyhere.archivist_defeated.title": "The Archivist Falls",
+  "advancements.someonewasalreadyhere.archivist_defeated.description": "Defeat the Archivist who keeps the records of your trespass.",
+  "advancements.someonewasalreadyhere.boss_slayer.title": "Boss Slayer",
+  "advancements.someonewasalreadyhere.boss_slayer.description": "Kill Observer Prime, the Archivist, and the Curator.",
+  "advancements.someonewasalreadyhere.craft_stabilizer.title": "Find Your Feet",
+  "advancements.someonewasalreadyhere.craft_stabilizer.description": "Craft a Stabilizer Charm to resist the growing dread.",
+  "advancements.someonewasalreadyhere.craft_echo_lens.title": "See Through Time",
+  "advancements.someonewasalreadyhere.craft_echo_lens.description": "Craft an Echo Lens and glimpse what was already here."
 }

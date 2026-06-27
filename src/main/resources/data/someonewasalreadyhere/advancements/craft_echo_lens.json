@@ -1,0 +1,20 @@
+{
+  "parent": "someonewasalreadyhere:craft_stabilizer",
+  "display": {
+    "icon": { "item": "someonewasalreadyhere:echo_lens" },
+    "title": { "translate": "advancements.someonewasalreadyhere.craft_echo_lens.title" },
+    "description": { "translate": "advancements.someonewasalreadyhere.craft_echo_lens.description" },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["someonewasalreadyhere:echo_lens"] }]
+      }
+    }
+  },
+  "requirements": [["craft"]]
+}
