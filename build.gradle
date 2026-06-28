@@ -22,19 +22,18 @@ dependencies {
     implementation "net.neoforged:forge:${minecraft_version}-${forge_version}"
 }
 
-userdev {
-    accessTransformer {
-        file 'src/main/resources/META-INF/accesstransformer.cfg'
-    }
-}
-
 runs {
     configureEach {
         modSource sourceSets.main
     }
-    client {}
-    server {}
-    datagen {
+    client {
+        client()
+    }
+    server {
+        server()
+    }
+    data {
+        data()
         programArguments.addAll '--mod', mod_id, '--all',
                 '--output', file('src/generated/resources').absolutePath,
                 '--existing', file('src/main/resources').absolutePath
