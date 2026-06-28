@@ -25,6 +25,17 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Debug — print Gradle wrapper info
+        run: |
+          echo "=== gradle-wrapper.properties ==="
+          cat gradle/wrapper/gradle-wrapper.properties
+          echo ""
+          echo "=== gradlew script version ==="
+          head -5 gradlew
+          echo ""
+          echo "=== gradle-wrapper.jar size ==="
+          ls -la gradle/wrapper/gradle-wrapper.jar || echo "JAR MISSING"
+
       - name: Validate Gradle wrapper
         uses: gradle/actions/wrapper-validation@v4
 
@@ -38,7 +49,7 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
             .gradle
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle*', '**/settings.gradle') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
@@ -53,7 +64,7 @@ jobs:
             ${{ runner.os }}-forge-
 
       - name: Build mod
-        run: ./gradlew build --no-daemon
+        run: ./gradlew build --no-daemon --stacktrace
         env:
           GRADLE_OPTS: "-Xmx4G -XX:+UseParallelGC"
 
