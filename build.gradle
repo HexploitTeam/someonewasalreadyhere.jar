@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'net.neoforged.gradle.userdev' version '7.0.145'
+    id 'net.neoforged.gradle.userdev' version '7.0.97'
 }
 
 version = '1.0.0'
@@ -14,16 +14,10 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 neoForge {
     version = '20.1.86'
-    accessTransformers {
-        file('src/main/resources/META-INF/accesstransformer.cfg')
-    }
 
     runs {
         configureEach {
             modSource project.sourceSets.main
-            workingDirectory project.file('run')
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            systemProperty 'forge.logging.console.level', 'debug'
         }
         client {
             client()
@@ -33,22 +27,15 @@ neoForge {
         }
         data {
             data()
-            programArguments.addAll '--mod', 'someonewasalreadyhere', '--all', '--output', file('src/generated/resources').getAbsolutePath(), '--existing', file('src/main/resources').getAbsolutePath()
+            programArguments.addAll '--mod', 'someonewasalreadyhere',
+                    '--all',
+                    '--output', file('src/generated/resources').absolutePath,
+                    '--existing', file('src/main/resources').absolutePath
         }
     }
 }
 
-sourceSets {
-    main {
-        resources {
-            srcDir 'src/generated/resources'
-        }
-    }
-}
-
-dependencies {
-    // NeoForge is provided by the userdev plugin via neoForge.version above
-}
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 jar {
     manifest {

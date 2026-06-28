@@ -1,4 +1,0 @@
-This file is a placeholder for gradle-wrapper.jar.
-Run: gradle wrapper --gradle-version 8.8
-inside the project to generate the real binary, or download it from:
-https://raw.githubusercontent.com/gradle/gradle/v8.8.0/gradle/wrapper/gradle-wrapper.jar

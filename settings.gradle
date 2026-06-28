@@ -1,8 +1,17 @@
 pluginManagement {
     repositories {
-        maven { url = 'https://maven.neoforged.net/releases' }
-        mavenCentral()
         gradlePluginPortal()
+        mavenCentral()
+        maven { url = 'https://maven.neoforged.net/releases' }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        mavenCentral()
+        maven { url = 'https://maven.neoforged.net/releases' }
+        maven { url = 'https://libraries.minecraft.net' }
     }
 }
 
