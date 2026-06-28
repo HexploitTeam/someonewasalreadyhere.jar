@@ -571,9 +571,9 @@ public class ModEntities {
             // Attract passive mobs within 32 blocks to follow this entity
             List<Mob> nearby = level().getEntitiesOfClass(Mob.class,
                 this.getBoundingBox().inflate(32),
-                e -> e != this && !(e instanceof Player) && !(e instanceof Monster));
+                e -> e != this && !(e instanceof Monster));
             for (Mob mob : nearby) {
-                if (mob == this || mob instanceof Player || mob instanceof Monster) continue;
+                if (mob == this || mob instanceof Monster) continue;
                 Vec3 toShepherd = this.position().subtract(mob.position()).normalize().scale(0.1);
                 mob.setDeltaMovement(mob.getDeltaMovement().add(toShepherd));
             }
