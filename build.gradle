@@ -12,37 +12,42 @@ base {
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-minecraft {
-    mappings channel: 'official', version: '1.20.1'
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-}
-
-runs {
-    client {
-        workingDirectory project.file('run')
-        property 'forge.logging.markers', 'REGISTRIES'
-        property 'forge.logging.console.level', 'debug'
-        mods {
-            someonewasalreadyhere {
-                source sourceSets.main
-            }
-        }
+neoForge {
+    version = '20.1.86'
+    accessTransformers {
+        file('src/main/resources/META-INF/accesstransformer.cfg')
     }
 
-    server {
-        workingDirectory project.file('run')
-        property 'forge.logging.markers', 'REGISTRIES'
-        property 'forge.logging.console.level', 'debug'
-        mods {
-            someonewasalreadyhere {
-                source sourceSets.main
-            }
+    runs {
+        configureEach {
+            modSource project.sourceSets.main
+            workingDirectory project.file('run')
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', 'someonewasalreadyhere', '--all', '--output', file('src/generated/resources').getAbsolutePath(), '--existing', file('src/main/resources').getAbsolutePath()
+        }
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/generated/resources'
         }
     }
 }
 
 dependencies {
-    implementation "net.neoforged:neoforge:20.1.86"
+    // NeoForge is provided by the userdev plugin via neoForge.version above
 }
 
 jar {
