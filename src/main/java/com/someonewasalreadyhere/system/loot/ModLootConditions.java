@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModLootConditions {
 
     public static final DeferredRegister<LootItemConditionType> LOOT_CONDITIONS =
-        DeferredRegister.create(ForgeRegistries.Keys.LOOT_CONDITION_TYPES, SomeoneWasAlreadyHere.MODID);
+        DeferredRegister.create(Registries.LOOT_CONDITION_TYPE, SomeoneWasAlreadyHere.MODID);
 
     public static final RegistryObject<LootItemConditionType> AWARENESS_CHECK =
         LOOT_CONDITIONS.register("awareness_check", () -> AwarenessCondition.TYPE);

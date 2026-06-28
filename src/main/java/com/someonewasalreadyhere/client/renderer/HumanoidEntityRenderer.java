@@ -20,8 +20,7 @@ public abstract class HumanoidEntityRenderer<T extends Mob> extends HumanoidMobR
         super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM)), shadowRadius);
         this.addLayer(new HumanoidArmorLayer<>(this,
             new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM_INNER_ARMOR)),
-            new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM_OUTER_ARMOR)),
-            ctx.getModelSet()
+            new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM_OUTER_ARMOR))
         ));
     }
 

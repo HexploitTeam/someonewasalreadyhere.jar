@@ -96,7 +96,7 @@ public class ModItems {
 
     // ─── Helper ───────────────────────────────────────────────────────────────
 
-    private static Properties props() {
+    private static Item.Properties props() {
         return new Item.Properties().stacksTo(1);
     }
 
@@ -113,7 +113,7 @@ public class ModItems {
         public DistortedCompass() { super(props()); }
 
         @Override
-        public void onUseTick(Level level, LivingEntityWrapper entity, ItemStack stack, int remainingUseDuration) {
+        public void onUseTick(Level level, net.minecraft.world.entity.LivingEntity entity, ItemStack stack, int remainingUseDuration) {
             // Implemented in player tick via AwarenessEventHandler
         }
 
@@ -576,7 +576,4 @@ public class ModItems {
             tooltip.add(Component.literal("Picks up signals that shouldn't exist."));
         }
     }
-
-    // Placeholder interface to suppress compile errors from mis-referenced method
-    private interface LivingEntityWrapper {}
 }

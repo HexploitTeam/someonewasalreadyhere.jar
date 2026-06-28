@@ -42,7 +42,8 @@ public class AwarenessCondition implements LootItemCondition {
     public boolean test(LootContext ctx) {
         if (!ctx.hasParam(LootContextParams.ORIGIN)) return false;
         var level = ctx.getLevel();
-        if (!(level instanceof ServerLevel sl)) return false;
+        if (!(level instanceof ServerLevel)) return false;
+        ServerLevel sl = (ServerLevel) level;
         int awareness = AwarenessWorldData.get(sl).getAwareness();
         return awareness >= min && awareness <= max;
     }

@@ -569,7 +569,7 @@ public class ModEntities {
             steerTimer = 0;
 
             // Attract passive mobs within 32 blocks to follow this entity
-            List<PathfinderMob> nearby = level().getEntitiesOfClass(PathfinderMob.class,
+            List<Mob> nearby = level().getEntitiesOfClass(Mob.class,
                 this.getBoundingBox().inflate(32),
                 e -> !(e instanceof Player || e instanceof Monster || e == this));
             for (PathfinderMob mob : nearby) {
