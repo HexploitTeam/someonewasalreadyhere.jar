@@ -1,43 +1,48 @@
 plugins {
-    id 'java'
-    id 'net.neoforged.gradle.userdev' version '7.0.97'
+    id 'java-library'
+    id 'net.neoforged.moddev.legacyforge' version '2.0.91'
 }
 
-version = '1.0.0'
-group = 'com.someonewasalreadyhere'
+version = mod_version
+group = mod_group_id
 
 base {
-    archivesName = 'someonewasalreadyhere'
+    archivesName = mod_id
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 repositories {
-    mavenCentral()
-    maven { url = 'https://maven.neoforged.net/releases' }
+    mavenLocal()
 }
 
-dependencies {
-    implementation 'net.neoforged:neoforge:20.1.86'
-}
+legacyForge {
+    version = "${minecraft_version}-${forge_version}"
 
-userdev {
-    accessTransformer {
-        file 'src/main/resources/META-INF/accesstransformer.cfg'
+    runs {
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', mod_id, '--all',
+                    '--output', file('src/generated/resources/').absolutePath,
+                    '--existing', file('src/main/resources/').absolutePath
+        }
     }
-}
 
-runs {
-    configureEach {
-        modSource sourceSets.main
-    }
-    client {}
-    server {}
-    datagen {
-        programArguments.addAll '--mod', 'someonewasalreadyhere',
-                '--all',
-                '--output', file('src/generated/resources').absolutePath,
-                '--existing', file('src/main/resources').absolutePath
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
     }
 }
 
@@ -46,12 +51,12 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 jar {
     manifest {
         attributes([
-            'Specification-Title'     : 'someonewasalreadyhere',
-            'Specification-Vendor'    : 'someonewasalreadyhere',
+            'Specification-Title'     : mod_id,
+            'Specification-Vendor'    : mod_authors,
             'Specification-Version'   : '1',
             'Implementation-Title'    : project.name,
             'Implementation-Version'  : project.jar.archiveVersion,
-            'Implementation-Vendor'   : 'someonewasalreadyhere',
+            'Implementation-Vendor'   : mod_authors,
             'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
@@ -59,21 +64,25 @@ jar {
 
 processResources {
     var replaceProperties = [
-        minecraft_version      : '1.20.1',
-        minecraft_version_range: '[1.20.1,1.21)',
-        neo_version            : '20.1.86',
-        neo_version_range      : '[20.1,20.2)',
-        loader_version_range   : '[1,)',
-        mod_id                 : 'someonewasalreadyhere',
-        mod_name               : 'Someone Was Already Here',
-        mod_license            : 'MIT',
-        mod_version            : project.version,
-        mod_authors            : 'someonewasalreadyhere',
-        mod_description        : 'A psychological horror simulation mod.'
+        minecraft_version      : minecraft_version,
+        minecraft_version_range: minecraft_version_range,
+        forge_version          : forge_version,
+        forge_version_range    : forge_version_range,
+        loader_version_range   : loader_version_range,
+        mod_id                 : mod_id,
+        mod_name               : mod_name,
+        mod_license            : mod_license,
+        mod_version            : mod_version,
+        mod_authors            : mod_authors,
+        mod_description        : mod_description
     ]
     inputs.properties replaceProperties
 
-    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+    filesMatching(['META-INF/mods.toml']) {
         expand replaceProperties
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }
