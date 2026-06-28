@@ -18,10 +18,7 @@ public abstract class HumanoidEntityRenderer<T extends Mob> extends HumanoidMobR
 
     protected HumanoidEntityRenderer(EntityRendererProvider.Context ctx, float shadowRadius) {
         super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM)), shadowRadius);
-        this.addLayer(new HumanoidArmorLayer<>(this,
-            new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM_INNER_ARMOR)),
-            new HumanoidModel<>(ctx.bakeLayer(ModelLayers.PLAYER_SLIM_OUTER_ARMOR))
-        ));
+        // Armor layer omitted — entities in this mod do not wear armor
     }
 
     // ─── Variant: basic horror entity ─────────────────────────────────────────

@@ -11,14 +11,13 @@ import net.minecraft.resources.ResourceLocation;
 /**
  * Renders ArchiveHound using the Wolf model with a custom texture.
  */
-@SuppressWarnings("unchecked")
 public class QuadrupedEntityRenderer extends MobRenderer<ModEntities.ArchiveHoundEntity, WolfModel<ModEntities.ArchiveHoundEntity>> {
 
     private static final ResourceLocation TEXTURE =
         new ResourceLocation(SomeoneWasAlreadyHere.MODID, "textures/entity/archive_hound.png");
 
     public QuadrupedEntityRenderer(EntityRendererProvider.Context ctx) {
-        super(ctx, new WolfModel(ctx.bakeLayer(ModelLayers.WOLF)), 0.5f);
+        super(ctx, new WolfModel<>(ctx.bakeLayer(ModelLayers.WOLF)), 0.5f);
     }
 
     @Override

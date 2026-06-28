@@ -285,8 +285,8 @@ public class ModEntities {
      * Fast-moving hostile. Tracks players by echo history. When killed, raises
      * awareness by 50 and sends a system message.
      */
-    public static class ArchiveHoundEntity extends Monster {
-        public ArchiveHoundEntity(EntityType<? extends Monster> type, Level level) {
+    public static class ArchiveHoundEntity extends net.minecraft.world.entity.animal.Wolf {
+        public ArchiveHoundEntity(EntityType<? extends net.minecraft.world.entity.animal.Wolf> type, Level level) {
             super(type, level);
         }
 
@@ -571,8 +571,9 @@ public class ModEntities {
             // Attract passive mobs within 32 blocks to follow this entity
             List<Mob> nearby = level().getEntitiesOfClass(Mob.class,
                 this.getBoundingBox().inflate(32),
-                e -> !(e instanceof Player || e instanceof Monster || e == this));
-            for (PathfinderMob mob : nearby) {
+                e -> e != this && !(e instanceof Player) && !(e instanceof Monster));
+            for (Mob mob : nearby) {
+                if (mob == this || mob instanceof Player || mob instanceof Monster) continue;
                 Vec3 toShepherd = this.position().subtract(mob.position()).normalize().scale(0.1);
                 mob.setDeltaMovement(mob.getDeltaMovement().add(toShepherd));
             }
