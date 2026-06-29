@@ -1,8 +1,8 @@
 package com.someonewasalreadyhere.core.registry;
 
 import com.someonewasalreadyhere.SomeoneWasAlreadyHere;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModCreativeTab {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
-        DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SomeoneWasAlreadyHere.MODID);
+        DeferredRegister.create(new ResourceLocation("minecraft", "creative_mode_tab"), SomeoneWasAlreadyHere.MODID);
 
     public static final RegistryObject<CreativeModeTab> HORROR_TAB = CREATIVE_TABS.register(
         "horror_tab",

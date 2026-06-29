@@ -38,10 +38,11 @@ public class ModBlocks {
     // ─── Block Items ──────────────────────────────────────────────────────────
 
     public static void registerBlockItems() {
-        for (RegistryObject<Block> block : new RegistryObject[]{ CORRUPTED_STONE, ARCHIVE_BRICKS, QUIET_GRASS_BLOCK,
-            DISTORTED_ORE, REINFORCED_ARCHIVE, STATIC_STONE }) {
-            ModItems.ITEMS.register(block.getId().getPath(),
-                () -> new BlockItem(block.get(), new Item.Properties()));
-        }
+        ModItems.ITEMS.register("corrupted_stone",   () -> new BlockItem(CORRUPTED_STONE.get(),   new Item.Properties()));
+        ModItems.ITEMS.register("archive_bricks",    () -> new BlockItem(ARCHIVE_BRICKS.get(),    new Item.Properties()));
+        ModItems.ITEMS.register("quiet_grass_block", () -> new BlockItem(QUIET_GRASS_BLOCK.get(), new Item.Properties()));
+        ModItems.ITEMS.register("distorted_ore",     () -> new BlockItem(DISTORTED_ORE.get(),     new Item.Properties()));
+        ModItems.ITEMS.register("reinforced_archive",() -> new BlockItem(REINFORCED_ARCHIVE.get(),new Item.Properties()));
+        ModItems.ITEMS.register("static_stone",      () -> new BlockItem(STATIC_STONE.get(),      new Item.Properties()));
     }
 }
